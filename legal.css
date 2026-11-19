@@ -1,0 +1,14 @@
+:root { --bg: #f4ead3; --ink: #2b1d0e; --muted: #6b5434; --rule: #c9a96a; --head: #6a3b0c; }
+@media (prefers-color-scheme: dark) { :root { --bg: #171310; --ink: #efe2c4; --muted: #b29a72; --rule: #5a4626; --head: #e3b768; } }
+html { background: var(--bg); }
+body { margin: 0; padding: 20px 16px 48px; color: var(--ink); background: var(--bg);
+  font: 16px/1.55 "Trebuchet MS", "Segoe UI", Tahoma, Arial, sans-serif; }
+article { max-width: 680px; margin: 0 auto; }
+article + article { margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--rule); }
+h1 { margin: 0 0 4px; font-size: 26px; color: var(--head); }
+h2 { margin: 22px 0 4px; font-size: 17px; color: var(--head); }
+p { margin: 0 0 8px; }
+.date { color: var(--muted); font-size: 14px; margin-bottom: 14px; }
+/* in the game one language is shown (legal.js: ?lang=) */
+body.one article + article { margin-top: 0; padding-top: 0; border-top: 0; }
+body.one article[hidden] { display: none; }
